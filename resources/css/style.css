@@ -15,5 +15,24 @@ html {
 
 .row {
   max-width: 1140px;
-  margin: 0 auto;
+  margin: 0 auto; /*margin: top right bottom left*/
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+  background-size: cover; /*to cover the entire space*/
+  background-position: center; /*center background image*/
+  height: 100vh; /*make header's height the same as the broswer view port*/
+}
+
+.hero-text-box {
+  position: absolute; /*position absolute so we can absolute center the text*/
+  width: 1140;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*transform to minus 50% of width and 50% of height of the element so the element will be perfectly centered*/
+}
+
+h1 {
+  margin: 0;
 }
