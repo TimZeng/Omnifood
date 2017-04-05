@@ -207,8 +207,20 @@ header {
 }
 
 /* ----------------------------------------------------------- */
+/* Features */
+/* ----------------------------------------------------------- */
+
+.section-features .long-copy {
+  margin-bottom: 35px;
+}
+
+/* ----------------------------------------------------------- */
 /* Meals */
 /* ----------------------------------------------------------- */
+
+.section-meals {
+  padding: 0;
+}
 
 .meals-showcase {
   list-style: none;
@@ -224,9 +236,19 @@ header {
 .meal-photo {
   width: 100%;
   margin: 0;
+  overflow: hidden; /*images are larger than the meal-photo container, so hide the overflow*/
+  background-color: #000; /*give black background with opacity 0.6 to make images darker*/
 }
 
 .meal-photo img {
-  width: 100%;
+  opacity: 0.6;
+  width: 100%; /*make sure images are the same size as container*/
   height: auto;
+  transform: scale(1.15); /*scale images*/
+  transition: transform 0.5s, opacity 0.5s; /*create animation*/
+}
+
+.meal-photo img:hover {
+  transform: scale(1.03); /*zoom out images when hover*/
+  opacity: 1;
 }
