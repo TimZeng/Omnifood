@@ -143,12 +143,13 @@ a:active {
 /* ----- Button ----- */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
   display: inline-block; /*inline-block doesn't force line break but has margins/paddings*/
   padding: 10px 30px; /*only give 2 values will repeat for bottom and left respectively*/
   font-weight: 300;
   text-decoration: none; /*remove underline*/
-  border-radius: 5px;
+  border-radius: 3px;
   transition: background-color 0.2s, border 0.2s, color 0.2s; /*this is a CSS3 feature, specify attributes for transition and the duration*/
 }
 
@@ -160,7 +161,8 @@ a:active {
  */
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
   background-color: #e67e22;
   border: 1px solid #e67e22;
   color: #fff;
@@ -174,7 +176,9 @@ a:active {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
   background-color: #cf6d17;
 }
 
@@ -462,4 +466,34 @@ cite img {
   padding: 5px 0;
 }
 
+/* ----------------------------------------------------------- */
+/* Contact */
+/* ----------------------------------------------------------- */
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type=checkbox] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
 
