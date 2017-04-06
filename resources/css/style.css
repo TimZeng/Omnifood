@@ -12,13 +12,15 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   background-color: #fff;
   color: #555;
   font-family: 'Lato', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 .clearfix {zoom: 1;}
@@ -214,7 +216,9 @@ header {
   width: 1140;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /*transform to minus 50% of width and 50% of height of the element so the element will be perfectly centered*/
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); /*transform to minus 50% of width and 50% of height of the element so the element will be perfectly centered*/
 }
 
 .logo {
@@ -289,12 +293,18 @@ header {
   opacity: 0.6;
   width: 100%; /*make sure images are the same size as container*/
   height: auto;
-  transform: scale(1.15); /*scale images*/
-  transition: transform 0.5s, opacity 0.5s; /*create animation*/
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15); /*scale images*/
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; /*create animation*/
 }
 
 .meal-photo img:hover {
-  transform: scale(1.03); /*zoom out images when hover*/
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03); /*zoom out images when hover*/
   opacity: 1;
 }
 
